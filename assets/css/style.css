@@ -39,7 +39,31 @@ body {
 }
 
 .content .input__part {
+    display: none;
     margin: 20px 25px 30px;
+}
+
+.input__part .info__text {
+    display: none;
+    text-align: center;
+    font-size: 17px;
+    padding: 12px 10px;
+    border-radius: 7px;
+    margin-bottom: 15px;
+}
+
+.info__text.erro {
+    display: block;
+    color: #721c24;
+    background: #f8d7da;
+    border: 1px solid #f5c6cb;
+}
+
+.info__text.pending {
+    display: block;
+    color: #fff;
+    background-image: linear-gradient(-180deg, #5AC7FD, #0387D8);
+    border: 1px solid #bee5eb;
 }
 
 .input__part :where(input, button) {
@@ -55,3 +79,32 @@ body {
     text-align: center;
     border: 1px solid #bfbfbf;
 }
+
+.input__part input:is(:focus, :valid) {
+    border: 2px solid #43affc;
+}
+
+.input__part .separator {
+    height: 1px;
+    width: 100%;
+    margin: 25px 0;
+    background: #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.separator::before {
+    content: "ou";
+    background: #fff;
+    color: #ccc;
+    font-size: 19px;
+    padding: 0 15px;
+}
+
+.input__part button {
+    color: #fff;
+    cursor: pointer;
+    background-image: linear-gradient(-180deg, #5AC7FD, #0387D8);
+}
+
