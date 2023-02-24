@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./assets/css/reset.css">
     <link rel="stylesheet" href="./assets/css/style.css">
     <title>Weather app</title>
@@ -18,7 +19,7 @@
                 <p class="info__text">Entre com um nome de cidade</p>
                 <input type="text" name="cidade" placeholder="Nome da cidade" spellcheck="erro" required>
                 <div class="separator"></div>
-                <button>Buscar cidade</button>
+                <button>Buscar local do dispositivo</button>
             </section>
             <section class="weather__part">
                 <img src="./assets/img/clear.png" alt="Weather Icon">
@@ -33,10 +34,10 @@
                 </div>
                 <div class="bottom__details">
                     <div class="column feels" feels>
-                        <i class="fa-solid fa-temperature-high"></i>
+                        <i class="fa-solid fa-temperature-three-quarters"></i>
                         <div class="details">
                             <div class="temp">
-                                <span class="numb">17</span>
+                                <span class="numb__2">17</span>
                                 <span class="deg">º</span>C
                             </div>
                             <p>Sensação</p>      
@@ -45,7 +46,7 @@
                     <div class="column humidity" feels>
                         <i class="fa-solid fa-droplet"></i>
                         <div class="details">
-                            <span class="numb">84%</span>
+                            <span>84%</span>
                             <p>Humidade</p>      
                         </div>
                     </div>

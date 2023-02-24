@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: sans-serif;
+    font-family: 'Hanken Grotesk', sans-serif;
 }
 
 body {
@@ -34,13 +35,22 @@ body {
 
 .content h1 i {
     cursor: pointer;
-    font-size: 20px;
+    font-size: 0px;
     margin-right: 8px;
 }
 
+.content.active h1 i {
+    cursor: pointer;
+    font-size: 20px;
+    margin-left: 5px;
+}
+
 .content .input__part {
-    display: none;
     margin: 20px 25px 30px;
+}
+
+.content.active .input__part {
+    display: none;
 }
 
 .input__part .info__text {
@@ -110,10 +120,14 @@ body {
 
 .content .weather__part {
     margin: 30px 0 0;
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+}
+
+.content.active .weather__part {
+    display: flex;
 }
 
 .weather__part img {
@@ -152,5 +166,45 @@ body {
 .location i {
     font-size: 22px;
     margin-right: 5px;
-    
+}
+
+.weather__part .bottom__details {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid #bfbfbf;
+}
+
+.bottom__details .column {
+    width: 100%;
+    padding: 15px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.column i {
+    color: #0387D8;
+    font-size: 40px;
+}
+
+.column.humidity {
+    border-left: 1px solid #bfbfbf;
+}
+
+.details .temp, .humidity span {
+    font-size: 18px;
+    font-weight: 500;
+    margin-top: -3px;
+}
+
+.details .temp .deg {
+    margin: 0;
+    font-size: 17px;
+    pad: 0 2px 0 1px;
+}
+
+.details p {
+    font-size: 14px;
 }
