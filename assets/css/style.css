@@ -163,9 +163,8 @@ body {
     margin-bottom: 30px;
 }
 
-.location i {
-    font-size: 22px;
-    margin-right: 5px;
+.location img {
+    width: 40px;
 }
 
 .weather__part .bottom__details {
@@ -184,9 +183,8 @@ body {
     justify-content: center;
 }
 
-.column i {
-    color: #0387D8;
-    font-size: 40px;
+.column img {
+    width: 40px;
 }
 
 .column.humidity {
