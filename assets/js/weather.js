@@ -4,6 +4,8 @@ const inputPart = content.querySelector(".input__part");
 const infoTxt = inputPart.querySelector(".info__text");
 const inputField = inputPart.querySelector("input");
 const locationBtn = inputPart.querySelector("button");
+const icon = content.querySelector(".weather__part .weather__icon");
+const back = content.querySelector("h1 i");
 
 let api;
 
@@ -54,6 +56,20 @@ function weatherDetail(info) {
         const {description, id} = info.weather[0];
         const {feels_like, humidity, temp} = info.main;
 
+        if (id == 800) {
+            icon.src = "./assets/img/clear.png";
+        }else if (id >= 200 && id <= 232) {
+            icon.src = "./assets/img/strom.png";
+        }else if (id >= 600 && id <= 622) {
+            icon.src = "./assets/img/snow.png";
+        }else if (id >= 701 && id <= 781) {
+            icon.src = "./assets/img/haze.png";
+        }else if (id >= 801 && id <= 804) {
+            icon.src = "./assets/img/cloud.png";
+        }else if ((id >= 300 && id <= 321) || (id >= 500 && id <= 531)) {
+            icon.src = "./assets/img/rain.png";
+        } 
+
         content.querySelector(".temp .numb").innerText = Math.floor(temp);
         content.querySelector(".weather").innerText = description;
         content.querySelector(".location span").innerText = `${city}, ${country}`;
@@ -62,6 +78,9 @@ function weatherDetail(info) {
 
         infoTxt.classList.remove("pending", "erro");
         content.classList.add("active");
-        console.log(info);
     }
 }
+
+back.addEventListener("click", () => {
+    content.classList.remove("active");
+})
