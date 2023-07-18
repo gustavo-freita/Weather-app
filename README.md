@@ -1,4 +1,4 @@
-<h1 align="center"> Weather app</h1>
+<h1 align="center"><a href="https://gustavo-freita.github.io/Weather-app/">Weather app</a></h1>
 
 <p align="center">
   <img src="https://img.shields.io/static/v1?label=Visual Studio Code&message=IDE&color=blue&style=for-the-badge&logo=VSCODE"/>
